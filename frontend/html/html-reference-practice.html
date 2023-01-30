@@ -10,19 +10,25 @@
 </head>
 <body>
 
-    <p>Note: All things come from MDN reference (only includeing interesting things from my viewpoint)</p>
+    <h1>html-reference-practice</h1>
+    <p>Note: All things come from MDN reference (Only includeing interesting things from my viewpoint)</p>
+    <p lang="zh">HTML语义化是很重要的，所以我们要搞懂这些标签的含义，以使用正确的标签</p>
+    <p>HTML的可扩展性：自定义data-id属性；meta；link(css favicon rss prefetch)；microdata提供更好样式</p>
+    <p>HTML标签有标准规范，如：要求div不能放在p里面</p>
+    <p>总结：1）根据语义⽽不是样式来选择标签和属性；2）遵循 HTML 语法和嵌套规则；3）使⽤⼯具及时发现问题</p>
+    
+    <hr>
 
-
-    <!-- a href target -->
-    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_self">HTML LABEL internally</a>
-    <a href="//www.google.com/" target="_blank">Google externally</a>
+    <h2>a href target</h2>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_self">HTML LABEL MDN internally</a>
+    <a href="//www.xuetangx.com/course/THU08091000257/14768617?channel=i.area.learn_title" target="_blank">Course externally</a>
     <br>
 
-    <!-- id href -->
+    <h2>id href</h2>
     <a href="#dino-select">Go to Selection</a>
     <br>
 
-    <!-- blockquote(indentation) cite(italic) q(double quotation mark) sub var sup u css -->
+    <h2>blockquote(indentation) cite(italic) q(double quotation mark) sub var sup u css</h2>
     <blockquote cite="https://code.visualstudio.com/docs/languages/html">
         <p>Visual Studio <del>C++</del> <ins>Code</ins> provides basic support for HTML programming out of the box. There is syntax highlighting, smart completions with IntelliSense, and customizable formatting. VS Code also includes great Emmet support.</p>
         <p>It's good <sub>666</sub><var>666</var><sup>666</sup></p>
@@ -31,24 +37,24 @@
     <p><cite><a href="https://www.wikipedia.org/">维基百科</a></cite>上说 <u>JavaScript</u> <q>最初命名为 Mocha </q></p>
     <br>
 
-    <!-- em(italic) strong(bold) -->
+    <h2>em(italic) strong(bold)</h2>
     <p>Hello Jingtian Zhang!</p>
     <p>Hello <em>Jingtian</em> Zhang!</p>
     <p>Hello <strong>Jingtian Zhang!</strong></p>
     <br>
 
-    <!-- p pre(pre stylied) -->
+    <h2>p pre(pre stylied)</h2>
     <p>Hello         world!</p>
     <p>Hello    &nbsp&nbsp&nbsp&nbsp   world!</p>
     <pre>Hello         world!</pre>
     <br>
 
-    <!-- style.css -->
+    <h2>code kbd css</h2>
     <code>Syetem.out.println("hahaha");</code>
     <samp>Syetem.out.println("hahaha"); press <kbd>Ctrl</kbd></samp>
     <br>
 
-    <!-- optgroup select -->
+    <h2>optgroup select</h2>
     <label for="dino-select">Choose a dinosaur:</label>
     <select id="dino-select">
         <optgroup label="Theropods">
@@ -62,10 +68,21 @@
             <option>Apatosaurus</option>
         </optgroup>
     </select>
-    <br>
-    <br>
 
-    <!-- table colgroup col thead tbody tfoot tr(row) td(data cell) th(header) css-->
+    <h2>input radio checkbox</h2>
+    <form>
+        <label><input type="radio" name="size">M </label>
+        <label><input type="radio" name="size">L </label>
+        <input type="radio" name="size" id="xl"><label for="xl">XL </label>
+    </form>
+    <form>
+        <label><input type= "checkbox" checked>A</label>
+        <label><input type="checkbox">B</label>
+        <label><input type="checkbox">C</label>
+    </form>
+
+
+    <h2>table colgroup col caption thead tbody tfoot tr(row) td(data cell) th(header) row/colspan css</h2>
     <table>
         <caption>Superheros and sidekicks</caption>
         <colgroup>
@@ -84,14 +101,13 @@
         </thead>
         <tbody>
             <tr>
-                <th scope="row">Skill</th>
+                <th scope="row" rowspan="2">Skill</th>
                 <td>Smarts</td>
                 <td>Dex, acrobat</td>
                 <td>Super speed</td>
                 <td>Super speed</td>
             </tr>
             <tr>
-                <th scope="row">Even Row</th>
                 <td>Smarts</td>
                 <td>Dex, acrobat</td>
                 <td>Super speed</td>
@@ -101,22 +117,19 @@
         <tfoot>
             <tr>
                 <th scope="row">Total</th>
-                <td>Smarts</td>
-                <td>Dex, acrobat</td>
-                <td>Super speed</td>
-                <td>Super speed</td>
+                <td colspan="4">Smarts</td>
             </tr>
         </tfoot>
     </table>
     <br>
 
-    <!-- details summary -->
+    <h2>details summary</h2>
     <details>
         <summary>Details</summary>
         Something small enough to escape casual notice.
     </details>
 
-    <!-- dl(list) dt(term) dd(details) -->
+    <h2>dl(description list) dt(term) dd(details)</h2>
     <p>Please use the following paint colors for the new house:</p>
     <dl>
         <dt>Denim (semigloss finish)</dt>
@@ -127,7 +140,7 @@
         <dd>Layered on the walls</dd>
     </dl>
 
-    <!-- meter progress -->
+    <h2>meter progress</h2>
     <progress value="70" max="100">70 %</progress>
     <label for="fuel">Fuel level:</label>
     <meter id="fuel"
@@ -137,7 +150,7 @@
         at 50/100
     </meter>
 
-    <!-- input color -->
+    <h2>input color</h2>
     <p>Choose your monster's colors:</p>
     <div>
         <input type="color" id="head" name="head"
@@ -152,24 +165,100 @@
 
     <label for="start">Start date:</label>
 
-    <!-- input date 2018-01-01 2018-12-31-->
+    <h2>input date</h2>
+    <!-- 2018-01-01 2018-12-31 -->
     <input type="date" id="start" name="trip-start"
        value="2018-07-22"
        min="" max="">
 
-    <!-- input file -->
+    <h2>input file</h2>
     <label for="avatar">Choose a profile picture:</label>
     <input type="file"
             id="avatar" name="avatar"
             accept="image/png, image/jpeg">
 
-    <!-- label tel pattern size required valid css -->
+    <h2>label tel pattern size required valid css</h2>
     <label for="phone">Enter your phone number:</label>
     <input type="tel" id="phone" name="phone"
         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
         size="28"
         required>
     <small>Format: 123-456-7890</small>
+    
+    <h2>img jpg(loss function) png(transparent background) gif(dynamic)</h2>
+    <img src="../assets/img/sleeping-cat.jpg" alt="cat"
+    width="480" height="480"/>
+    <img src="../assets/img/fly-balloon.gif" alt="fly"
+    width="240" height="240"/>
+    <img src="../assets/img/pink-waterclor-brushes.png" alt="pink"
+    width="90" height="90"/>
+
+    <h2>iframe</h2>
+    <iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+    </iframe>
+
+    <h2>ol(ordered list) ul(unordered list)</h2>
+    <ol start="" type="A">
+        <li>Mix flour, baking powder, sugar, and salt.</li>
+        <li>In another bowl, mix eggs, milk, and oil.</li>
+        <li>Stir both mixtures together.</li>
+        <li>Fill muffin tray 3/4 full.</li>
+        <li>Bake for 20 minutes.</li>
+    </ol>
+    <ul>
+        <li>Mix flour, baking powder, sugar, and salt.</li>
+        <li>In another bowl, mix eggs, milk, and oil.</li>
+        <ul>
+            <li>Stir both mixtures together.</li>
+            <li>Fill muffin tray 3/4 full.</li>
+            <li>Bake for 20 minutes.</li>
+        </ul>
+    </ul>
+
+    <h2>nav</h2>
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href="#">Bikes</a></li>
+            <li class="crumb"><a href="#">BMX</a></li>
+            <li class="crumb">Jump Bike 3000</li>
+        </ol>
+    </nav>
+
+    <h2>form</h2>
+    <form>
+        <p>
+        <label>⽤户名： </label>
+        <input type="text" placeholder="3-32个字符">
+        </p>
+        <p>
+        <label>密码： </label>
+        <input type="password">
+        </p>
+        <p>
+        <label>年龄： </label>
+        <input type="number" value="20">
+        </p>
+        <p>
+        <label>头像： </label>
+        <input type="fle">
+        </p>
+        <p>
+        <label>⽣⽇： </label>
+        <input type="date">
+        </p>
+    </form>
+
+    <h2>textarea</h2>
+    <label for="story">Tell us your story:</label>
+    <textarea id="story" name="story"
+            rows="5" cols="33">
+    It was a dark and stormy night...
+    </textarea>
+
     
 
 </body>
