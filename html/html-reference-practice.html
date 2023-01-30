@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="html-reference-practice-style.css">
+    <title>HTML-REFERENCE-PRACTICE</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a -->
+</head>
+<body>
+
+    <p>Note: All things come from MDN reference (only includeing interesting things from my viewpoint)</p>
+
+
+    <!-- a href target -->
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_self">HTML LABEL internally</a>
+    <a href="//www.google.com/" target="_blank">Google externally</a>
+    <br>
+
+    <!-- id href -->
+    <a href="#dino-select">Go to Selection</a>
+    <br>
+
+    <!-- blockquote(indentation) cite(italic) q(double quotation mark) sub var sup u css -->
+    <blockquote cite="https://code.visualstudio.com/docs/languages/html">
+        <p>Visual Studio <del>C++</del> <ins>Code</ins> provides basic support for HTML programming out of the box. There is syntax highlighting, smart completions with IntelliSense, and customizable formatting. VS Code also includes great Emmet support.</p>
+        <p>It's good <sub>666</sub><var>666</var><sup>666</sup></p>
+    </blockquote>
+    <cite>code.visualstudio.com</cite>
+    <p><cite><a href="https://www.wikipedia.org/">维基百科</a></cite>上说 <u>JavaScript</u> <q>最初命名为 Mocha </q></p>
+    <br>
+
+    <!-- em(italic) strong(bold) -->
+    <p>Hello Jingtian Zhang!</p>
+    <p>Hello <em>Jingtian</em> Zhang!</p>
+    <p>Hello <strong>Jingtian Zhang!</strong></p>
+    <br>
+
+    <!-- p pre(pre stylied) -->
+    <p>Hello         world!</p>
+    <p>Hello    &nbsp&nbsp&nbsp&nbsp   world!</p>
+    <pre>Hello         world!</pre>
+    <br>
+
+    <!-- style.css -->
+    <code>Syetem.out.println("hahaha");</code>
+    <samp>Syetem.out.println("hahaha"); press <kbd>Ctrl</kbd></samp>
+    <br>
+
+    <!-- optgroup select -->
+    <label for="dino-select">Choose a dinosaur:</label>
+    <select id="dino-select">
+        <optgroup label="Theropods">
+            <option>Tyrannosaurus</option>
+            <option>Velociraptor</option>
+            <option>Deinonychus</option>
+        </optgroup>
+        <optgroup label="Sauropods">
+            <option>Diplodocus</option>
+            <option>Saltasaurus</option>
+            <option>Apatosaurus</option>
+        </optgroup>
+    </select>
+    <br>
+    <br>
+
+    <!-- table colgroup col thead tbody tfoot tr(row) td(data cell) th(header) css-->
+    <table>
+        <caption>Superheros and sidekicks</caption>
+        <colgroup>
+            <col>
+            <col span="2" class="batman">
+            <col span="2" class="flash">
+        </colgroup>
+        <thead>
+            <tr>
+                <td> </td>
+                <th scope="col">Batman</th>
+                <th scope="col">Robin</th>
+                <th scope="col">The Flash</th>
+                <th scope="col">Kid Flash</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Skill</th>
+                <td>Smarts</td>
+                <td>Dex, acrobat</td>
+                <td>Super speed</td>
+                <td>Super speed</td>
+            </tr>
+            <tr>
+                <th scope="row">Even Row</th>
+                <td>Smarts</td>
+                <td>Dex, acrobat</td>
+                <td>Super speed</td>
+                <td>Super speed</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total</th>
+                <td>Smarts</td>
+                <td>Dex, acrobat</td>
+                <td>Super speed</td>
+                <td>Super speed</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+
+    <!-- details summary -->
+    <details>
+        <summary>Details</summary>
+        Something small enough to escape casual notice.
+    </details>
+
+    <!-- dl(list) dt(term) dd(details) -->
+    <p>Please use the following paint colors for the new house:</p>
+    <dl>
+        <dt>Denim (semigloss finish)</dt>
+        <dd>Ceiling</dd>
+    
+        <dt>Denim (eggshell finish)</dt>
+        <dt>Evening Sky (eggshell finish)</dt>
+        <dd>Layered on the walls</dd>
+    </dl>
+
+    <!-- meter progress -->
+    <progress value="70" max="100">70 %</progress>
+    <label for="fuel">Fuel level:</label>
+    <meter id="fuel"
+        min="0" max="100"
+        low="33" high="66" optimum="80"
+        value="50">
+        at 50/100
+    </meter>
+
+    <!-- input color -->
+    <p>Choose your monster's colors:</p>
+    <div>
+        <input type="color" id="head" name="head"
+            value="#e66465">
+        <label for="head">Head</label>
+    </div>
+    <div>
+        <input type="color" id="body" name="body"
+                value="#f6b73c">
+        <label for="body">Body</label>
+    </div>
+
+    <label for="start">Start date:</label>
+
+    <!-- input date 2018-01-01 2018-12-31-->
+    <input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="" max="">
+
+    <!-- input file -->
+    <label for="avatar">Choose a profile picture:</label>
+    <input type="file"
+            id="avatar" name="avatar"
+            accept="image/png, image/jpeg">
+
+    <!-- label tel pattern size required valid css -->
+    <label for="phone">Enter your phone number:</label>
+    <input type="tel" id="phone" name="phone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        size="28"
+        required>
+    <small>Format: 123-456-7890</small>
+    
+
+</body>
+</html>
