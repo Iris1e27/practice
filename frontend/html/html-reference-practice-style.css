@@ -1,3 +1,8 @@
+/* css basic */
+* {
+    color:#555;
+}
+
 /* style */
 kbd {
     background-color: #eee;
@@ -91,7 +96,7 @@ label {
     margin-top: 1em;
 }
 
-input:valid, textarea:valid {
+input:valid {
     background-color: palegreen;
 }
 
